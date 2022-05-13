@@ -689,6 +689,7 @@ body {
 .work ul li {
     list-style-type: none;
     border: 3px solid #EAE7E7;
+    padding: 10px;
     margin: 0 5px;
     cursor: pointer;
     transition: var(--Transition);
@@ -696,6 +697,12 @@ body {
     -moz-transition: var(--Transition);
     -ms-transition: var(--Transition);
     -o-transition: var(--Transition);
+}
+@media (max-width: 540px) {
+    .work ul li {
+        margin: 0;
+        padding: 1px;
+    }
 }
 .work ul li:hover {
     background-color: var(--main-Color);
