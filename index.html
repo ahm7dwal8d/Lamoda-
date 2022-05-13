@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamoda</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,
+100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+rel="stylesheet">
+    <link rel="stylesheet" href="css/normalze.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <!-- Start Header  -->
+    <header class="header p-3">
+        <div class="container">
+            <a href="#" class="logo text-decoration-none text-capitalize fs-3 text-white fw-bold bottom">lamoda</a>
+            <div class="burger-icon">
+                <i class="fas fa-bars fs-2 text-white fw-bold"></i>
+            </div>
+            <ul class="m-0">
+                <li>
+                    <a href="#" class="active text-decoration-none text-capitalize p-3 fs-5 left" data-scroll="landing">home</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none text-capitalize p-3 fs-5 bottom" data-scroll="about">about</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none text-capitalize p-3 fs-5 top" data-scroll="history">history</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none text-capitalize p-3 fs-5 bottom" data-scroll="work">our work</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none text-capitalize p-3 fs-5 top" data-scroll="team">team</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none text-capitalize p-3 fs-5 bottom" data-scroll="services">services</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none text-capitalize p-3 fs-5 top" data-scroll="blog">blog</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none text-capitalize p-3 fs-5 bottom" data-scroll="testimonials">testimonials</a>
+                </li>
+                <li>
+                    <a href="#" class="text-decoration-none text-capitalize p-3 fs-5 right" data-scroll="contact">contact</a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- End Header  -->
+    <!-- Start Landing  -->
+    <section class="landing">
+        <div class="slider">
+            <div class="slider-1 slide">
+                <div class="container text-center">
+                    <h1 class="text-white mb-3 left">FREE RESPONSIVE TEMPLATE</h1>
+                    <h4 class="text-white mb-3 bottom">ARE YOU READY TO BUY THIS THEME</h4>
+                    <a href="#" class="text-decoration-none text-capitalize text-white top" data-landing="portfolio">view portfolio</a>
+                    <div class="btn">
+                        <button class="prev left" onclick="landingPrev()">
+                        <i class="fas fa-angle-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="next right" onclick="landingNext()">
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-2 slide">
+                <div class="container text-center">
+                    <h1 class="text-white mb-3 left">FREE RESPONSIVE TEMPLATE</h1>
+                    <h4 class="text-white mb-3 bottom">ARE YOU READY TO BUY THIS THEME</h4>
+                    <a href="#" class="text-decoration-none text-capitalize text-white top" data-landing="portfolio">view portfolio</a>
+                    <div class="btn">
+                        <button class="prev left" onclick="landingPrev()">
+                        <i class="fas fa-angle-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="next right" onclick="landingNext()">
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-3 slide">
+                <div class="container text-center">
+                    <h1 class="text-white mb-3 left">FREE RESPONSIVE TEMPLATE</h1>
+                    <h4 class="text-white mb-3 bottom">ARE YOU READY TO BUY THIS THEME</h4>
+                    <a href="#" class="text-decoration-none text-capitalize text-white top" data-landing="portfolio">view portfolio</a>
+                    <div class="btn">
+                        <button class="prev left" onclick="landingPrev()">
+                        <i class="fas fa-angle-left" aria-hidden="true"></i>
+                        </button>
+                        <button class="next right" onclick="landingNext()">
+                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Landing  -->
+    <!-- Start Box Setting -->
+    <div class="setting-box">
+        <div class="contianer">
+            <div class="icon">
+                <i class="fas fa-cog fs-5 p-2"></i>
+            </div>
+            <div class="color mt-2">
+                <h5>change default color</h5>
+                <ul class="p-0 m-0 d-flex">
+                    <li class="color one active" data-color="one"></li>
+                    <li class="color two" data-color="two"></li>
+                    <li class="color three" data-color="three"></li>
+                    <li class="color four" data-color="four"></li>
+                    <li class="color five" data-color="five"></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Box Setting -->
+    <!-- Start About  -->
+    <section class="about pt-5 pb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-lg-12 left">
+                    <div class="box mt-4">
+                        <i class="fas fa-leaf fs-1"></i>
+                        <div class="info ms-3">
+                            <h4>CLEAN & MODERN DESIGN</h4>
+                            <p class="text-black-50 lh-lg fs-5">Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 top">
+                    <div class="box mt-4">
+                        <i class="fab fa-telegram fs-1"></i>
+                        <div class="info ms-3">
+                            <h4>ILLUSTRATION</h4>
+                            <p class="text-black-50 lh-lg fs-5">Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 right">
+                    <div class="box mt-4">
+                        <i class="fas fa-life-ring fs-1"></i>
+                        <div class="info ms-3">
+                            <h4>APP DEVELOPMENT</h4>
+                            <p class="text-black-50 lh-lg fs-5">Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 right">
+                    <div class="box mt-4">
+                        <i class="fas fa-paint-roller fs-1"></i>
+                        <div class="info ms-3">
+                            <h4>WEB DEVELOPMENT</h4>
+                            <p class="text-black-50 lh-lg fs-5">Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 bottom">
+                    <div class="box mt-4">
+                        <i class="fas fa-chart-line fs-1"></i>
+                        <div class="info ms-3">
+                            <h4>DIGITAL DESIGN</h4>
+                            <p class="text-black-50 lh-lg fs-5">Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-12 left">
+                    <div class="box mt-4">
+                        <i class="fas fa-gift fs-1"></i>
+                        <div class="info ms-3">
+                            <h4>FULLY RESPONSIVE</h4>
+                            <p class="text-black-50 lh-lg fs-5">Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End About  -->
+    <!-- Start Facts  -->
+    <section class="facts pt-5 pb-5">
+        <div class="container">
+            <div class="row mt-4">
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 left">
+                    <div class="box mt-4 text-center">
+                        <i class="far fa-smile text-white mb-1"></i>
+                        <span class="num fw-bold d-block fs-1 mb-1 text-white" data-goal="841">0</span>
+                        <h4 class="text-white">HAPPY CLIENTS</h4>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 top">
+                    <div class="box mt-4 text-center">
+                        <i class="far fa-file-powerpoint text-white mb-1"></i>
+                        <span class="num fw-bold d-block fs-1 mb-1 text-white" data-goal="800">0</span>
+                        <h4 class="text-white">PROJECTS</h4>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 bottom">
+                    <div class="box mt-4 text-center">
+                        <i class="fas fa-bullseye text-white mb-1"></i>
+                        <span class="num fw-bold d-block fs-1 mb-1 text-white" data-goal="1232">0</span>
+                        <h4 class="text-white">LINES OF CODE</h4>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 right">
+                    <div class="box mt-4 text-center">
+                        <i class="fas fa-trophy text-white mb-1"></i>
+                        <span class="num fw-bold d-block fs-1 mb-1 text-white" data-goal="300">0</span>
+                        <h4 class="text-white">AWARDS WON</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Facts  -->
+    <!-- Start Section  -->
+    <section class="section pt-5 pb-5">
+        <div class="container">
+            <ul class="head d-flex flex-wrap justify-content-center top">
+                <li class="text-center active p-4" data-section="responsive">
+                    <i class="fas fa-desktop fs-1 mb-3"></i>
+                    <h5>RESPONSIVE</h5>
+                </li>
+                <li class="text-center p-4 " data-section="Flexible">
+                    <i class="fas fa-cubes fs-1 mb-3"></i>
+                    <h5>Flexible</h5>
+                </li>
+                <li class="text-center p-4" data-section="Support">
+                    <i class="fas fa-house-user fs-1 mb-3"></i>
+                    <h5>Support</h5>
+                </li>
+                <li class="text-center p-4" data-section="Design">
+                    <i class="fab fa-pagelines fs-1 mb-3"></i>
+                    <h5>Clean Design</h5>
+                </li>
+                <li class="text-center p-4" data-section="Use">
+                    <i class="fas fa-chart-pie fs-1 mb-3"></i>
+                    <h5>Easy to Use</h5>
+                </li>
+            </ul>
+            <div class="section-content">
+                <div class="all responsive">
+                    <div class="row mt-4 ">
+                        <div class="col-xl-6 col-md-12">
+                            <div class="box mt-4">
+                                <ul>
+                                    <li class="d-flex left">
+                                        <i class="fas fa-star fs-5 p-3 me-2"></i>
+                                        <div class="info ms-4">
+                                            <h5>DEDICATED SUPPORT & UPDATES</h5>
+                                            <p class="text-black-50 lh-lg fs-5">
+                                                Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex top">
+                                        <i class="fab fa-codepen fs-5 p-3 me-2"></i>
+                                        <div class="info ms-4">
+                                            <h5>DEDICATED SUPPORT & UPDATES</h5>
+                                            <p class="text-black-50 lh-lg fs-5">
+                                                Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex bottom">
+                                        <i class="fas fa-heart fs-5 p-3 me-2"></i>
+                                        <div class="info ms-4">
+                                            <h5>DEDICATED SUPPORT & UPDATES</h5>
+                                            <p class="text-black-50 lh-lg fs-5">
+                                                Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet. Et netus et malesuada fames ac turpis egestas tristique senectus.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-md-12 top">
+                            <div class="box img mt-4">
+                                <div class="slide">
+                                    <img src="images/works/img1.jpg" alt="">
+                                    <div class="btn">
+                                        <button class="prev" onclick="sectionPrev()">
+                                        <i class="fas fa-angle-left" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="next" onclick="sectionNext()">
+                                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <img src="images/works/img2.jpg" alt="">
+                                    <div class="btn">
+                                        <button class="prev" onclick="sectionPrev()">
+                                        <i class="fas fa-angle-left" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="next" onclick="sectionNext()">
+                                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="slide">
+                                    <img src="images/works/img3.jpg" alt="">
+                                    <div class="btn">
+                                        <button class="prev" onclick="sectionPrev()">
+                                        <i class="fas fa-angle-left" aria-hidden="true"></i>
+                                        </button>
+                                        <button class="next" onclick="sectionNext()">
+                                        <i class="fas fa-angle-right" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="all Flexible">
+                    <div class="row mt-4 ">
+                        <div class="col-xl-4 col-md-6 col-sm-12">
+                            <div class="box mt-4 p-3">
+                                <img src="images/services1.jpg" alt="">
+                                <h4 class="mt-3">OUR HISTORY</h4>
+                                <p class="text-black-50 lh-lg">
+                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12">
+                            <div class="box mt-4 p-3">
+                                <img src="images/services2.jpg" alt="">
+                                <h4 class="mt-3">WHAT WE DO</h4>
+                                <p class="text-black-50 lh-lg">
+                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6 col-sm-12">
+                            <div class="box mt-4 p-3">
+                                <img src="images/services3.jpg" alt="">
+                                <h4 class="mt-3">OUR MISSION</h4>
+                                <p class="text-black-50 lh-lg">
+                                    It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="all Support">
+                    <div class="row mt-4">
+                        <div class="col-xl-4 col-md-12">
+                            <div class="box mt-4">
+                                <ul class="text-left">
+                                    <li class="d-flex">
+                                        <div class="info me-3">
+                                            <h5>MULTIPURPOSE & RESPONSIVE</h5>
+                                            <p class="text-black-50 lh-lg">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.
+                                            </p>
+                                        </div>
+                                        <i class="fab fa-pagelines p-3 fs-4"></i>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="info me-3">
+                                            <h5>CREATIVE DESIGN</h5>
+                                            <p class="text-black-50 lh-lg">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.
+                                            </p>
+                                        </div>
+                                        <i class="fas fa-trophy p-3 fs-4"></i>
+                                    </li>
+                                    <li class="d-flex">
+                                        <div class="info me-3">
+                                            <h5>AWESOME THEME</h5>
+                                            <p class="text-black-50 lh-lg">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.
+                                            </p>
+                                        </div>
+                                        <i class="fas fa-tag p-3 fs-4"></i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-12">
+                            <div class="box mt-4">
+                                <img src="images/device.png" alt="">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-12">
+                            <div class="box mt-4">
+                                <ul class="text-right">
+                                    <li class="d-flex">
+                                        <i class="fas fa-eye-dropper p-3 fs-4"></i>
+                                        <div class="info ms-3">
+                                            <h5>STRATEGY SOLUTIONS</h5>
+                                            <p class="text-black-50 lh-lg">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex">
+                                        <i class="fab fa-searchengin p-3 fs-4"></i>
+                                        <div class="info ms-3">
+                                            <h5>APP DEVELOPMENT</h5>
+                                            <p class="text-black-50 lh-lg">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="d-flex">
+                                        <i class="fas fa-tag p-3 fs-4"></i>
+                                        <div class="info ms-3">
+                                            <h5>HTML5 & CSS3</h5>
+                                            <p class="text-black-50 lh-lg">
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="all Design">
+                    <div class="row mt-4 ">
+                        <div class="col-xl-3 col-md-6 col-sm-12">
+                            <div class="box mt-4 text-center">
+                                <i class="fas fa-bolt fs-1 p-3 mb-3"></i>
+                                <h5 class="mb-3">SIMPLE AND CLEAN CODES</h5>
+                                <p class="lh-lg text-black-50">
+                                    Vivamus a placerat ante. Duis vulputate nibh sit amet augue vehicula, mattis viverra purus tristique.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-12">
+                            <div class="box mt-4 text-center">
+                                <i class="fas fa-fire-flame-curved fs-1 p-3 mb-3"></i>
+                                <h5 class="mb-3">RESPONSIVE LAYOUT DESIGN</h5>
+                                <p class="lh-lg text-black-50">
+                                    Vivamus a placerat ante. Duis vulputate nibh sit amet augue vehicula, mattis viverra purus tristique.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-12">
+                            <div class="box mt-4 text-center">
+                                <i class="fas fa-link fs-1 p-3 mb-3"></i>
+                                <h5 class="mb-3">UNLIMITED SUPPORT</h5>
+                                <p class="lh-lg text-black-50">
+                                    Vivamus a placerat ante. Duis vulputate nibh sit amet augue vehicula, mattis viverra purus tristique.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-md-6 col-sm-12">
+                            <div class="box mt-4 text-center">
+                                <i class="fas fa-cart-shopping fs-1 p-3 mb-3"></i>
+                                <h5 class="mb-3">MULTIPURPOSE THEME</h5>
+                                <p class="lh-lg text-black-50">
+                                    Vivamus a placerat ante. Duis vulputate nibh sit amet augue vehicula, mattis viverra purus tristique.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="all Use">
+                    <div class="row mt-4 ">
+                        <div class="col-xl-6 col-lg-12">
+                            <div class="box mt-4">
+                                <p class="lh-lg text-black-50 fs-5">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing aliquam. Vestibulum in vestibulum lorem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur euismod enim a metus adipiscing.
+                                </p>
+                                <ul>
+                                    <li class="d-flex">
+                                        <i class="fas fa-check-circle me-2 fs-5"></i>
+                                        <h6 class="fs-5">Font-Awesome Integration</h6>
+                                    </li>
+                                    <li class="d-flex">
+                                        <i class="fas fa-check-circle me-2 fs-5"></i>
+                                        <h6 class="fs-5">Multiple unique designs</h6>
+                                    </li>
+                                    <li class="d-flex">
+                                        <i class="fas fa-check-circle me-2 fs-5"></i>
+                                        <h6 class="fs-5">Clean coded, responsive and multipurpose</h6>
+                                    </li>
+                                    <li class="d-flex">
+                                        <i class="fas fa-check-circle me-2 fs-5"></i>
+                                        <h6 class="fs-5">Pages valid on w3c.</h6>
+                                    </li>
+                                    <li class="d-flex">
+                                        <i class="fas fa-check-circle me-2 fs-5"></i>
+                                        <h6 class="fs-5">Well documented.</h6>
+                                    </li>
+                                    <li class="d-flex">
+                                        <i class="fas fa-check-circle me-2 fs-5"></i>
+                                        <h6 class="fs-5">Easy to customization.</h6>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-12">
+                            <div class="box mt-4">
+                                <img src="images/device-desktop.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Section  -->
+    <!-- Start Histoy  -->
+    <section class="history pt-5 pb-5">
+        <div class="container">
+            <div class="main-header left">
+                <h2 class="fw-bold text-white">HISTORY</h2>
+            </div>
+            <div class="timeline">
+                <div class="line"></div>
+                <div class="year">
+                    2014
+                </div>
+                <div class="main">
+                    <div class="box left">
+                        <div class=" p-3 ">
+                            <h4 class="text-white fs-6">LOREM IPSUM DOLOR CONSECTETUR ADIPISICING.</h4>
+                            <p class="lh-lg text-white">
+                                Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                            </p>
+                            <span class="text-white">18 OCT 2014</span>
+                        </div>
+                    </div>
+                    <div class="box right">
+                        <div class=" p-3 ">
+                            <h4 class="text-white fs-6">LOREM IPSUM DOLOR CONSECTETUR ADIPISICING.</h4>
+                            <p class="lh-lg text-white">
+                                Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                            </p>
+                            <span class="text-white">16 OCT 2014</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="year">
+                    2015
+                </div>
+                <div class="main">
+                    <div>
+                        <div class="box left">
+                            <div class=" p-3 ">
+                                <h4 class="text-white fs-6">LOREM IPSUM DOLOR CONSECTETUR ADIPISICING.</h4>
+                                <p class="lh-lg text-white">
+                                    Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                                </p>
+                                <span class="text-white">18 OCT 2014</span>
+                            </div>
+                        </div>
+                                            <div class="box left">
+                        <div class=" p-3 ">
+                            <h4 class="text-white fs-6">LOREM IPSUM DOLOR CONSECTETUR ADIPISICING.</h4>
+                            <p class="lh-lg text-white">
+                                Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                            </p>
+                            <span class="text-white">18 OCT 2014</span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="box right">
+                        <div class=" p-3 ">
+                            <h4 class="text-white fs-6">LOREM IPSUM DOLOR CONSECTETUR ADIPISICING.</h4>
+                            <p class="lh-lg text-white">
+                                Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                            </p>
+                            <span class="text-white">16 OCT 2014</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="year">
+                    <i class="fas fa-bookmark fs-3 "></i>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Histoy  -->
+    <!-- Start Work  -->
+    <section class="work pt-5 pb-5">
+        <div class="container">
+            <div class="main-header right">
+                <h2>our work</h2>
+            </div>
+            <ul class="p-0 m-0 d-flex justify-content-center bottom">
+                <li class="active text-capitalize p-2 fs-4" data-work="all">all</li>
+                <li class="text-capitalize p-2 fs-4" data-work="fashion">fashion</li>
+                <li class="text-capitalize p-2 fs-4" data-work="events">events</li>
+                <li class="text-capitalize p-2 fs-4" data-work="wedding">wedding</li>
+                <li class="text-capitalize p-2 fs-4" data-work="corporate">corporate</li>
+            </ul>
+        </div>
+        <div class="row mt-4">
+            <div class="col-xl-3 col-md-6 col-sm-12 all fashion top">
+                <div class="box mt-4">
+                    <img src="images/works/img1.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 all events left">
+                <div class="box mt-4">
+                    <img src="images/works/img2.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 all fashion top">
+                <div class="box mt-4">
+                    <img src="images/works/img3.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 all wedding bottom">
+                <div class="box mt-4">
+                    <img src="images/works/img4.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12  all events right">
+                <div class="box mt-4">
+                    <img src="images/works/img5.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 all fashion bottom">
+                <div class="box mt-4">
+                    <img src="images/works/img6.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 all corporate top">
+                <div class="box mt-4">
+                    <img src="images/works/img7.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 all events left">
+                <div class="box mt-4">
+                    <img src="images/works/img8.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 all wedding right">
+                <div class="box mt-4">
+                    <img src="images/works/img9.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 all corporate bottom">
+                <div class="box mt-4">
+                    <img src="images/works/img10.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 all wedding top">
+                <div class="box mt-4">
+                    <img src="images/works/img11.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-md-6 col-sm-12 all corporate left">
+                <div class="box mt-4">
+                    <img src="images/works/img12.jpg" alt="">
+                    <div class="overly p-3">
+                        <h4 class="text-white">PROJECT TITLE</h4>
+                        <h5 class="text-white">PROJECT TITLE</h5>
+                        <div class="icons mt-4">
+                            <i class="fas fa-plus fs-4 bg-white p-3"></i>
+                            <i class="fas fa-link fs-4 bg-white p-3"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Work  -->
+    <!-- Start Team  -->
+    <div class="team pt-5 pb-5">
+        <div class="container">
+            <div class="main-header left">
+                <h2>team</h2>
+            </div>
+            <div class="row mt-4">
+                <div class="col-xl-3 col-md-6 col-sm-12 left">
+                    <div class="box mt-4">
+                        <img src="images/team/team1.jpg" alt="">
+                        <h4 class="mt-3 right">Jonh Doe</h4>
+                        <h5 class="left">Graphic Designer</h5>
+                        <p class="lh-lg text-black-50 top">
+                            Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod temporcd incididunt consectetur laboredolore dolor adipisicing. 
+                        </p>
+                        <div class="icons">
+                            <i class="fab fa-facebook-f fs-4 p-3 left"></i>
+                            <i class="fab fa-twitter fs-4 p-3 top"></i>
+                            <i class="fab fa-instagram fs-4 p-3 bottom"></i>
+                            <i class="fab fa-linkedin fs-4 p-3 right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12 top">
+                    <div class="box mt-4">
+                        <img src="images/team/team2.jpg" alt="">
+                        <h4 class="mt-3 right">Jonh Doe</h4>
+                        <h5 class="left">Photogropher</h5>
+                        <p class="lh-lg text-black-50 top">
+                            Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod temporcd incididunt consectetur laboredolore dolor adipisicing. 
+                        </p>
+                        <div class="icons">
+                            <i class="fab fa-facebook-f fs-4 p-3 left"></i>
+                            <i class="fab fa-twitter fs-4 p-3 top"></i>
+                            <i class="fab fa-instagram fs-4 p-3 bottom"></i>
+                            <i class="fab fa-linkedin fs-4 p-3 right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12 right">
+                    <div class="box mt-4">
+                        <img src="images/team/team3.jpg" alt="">
+                        <h4 class="mt-3 right">Jonh Doe</h4>
+                        <h5 class=" left">Web Designer</h5>
+                        <p class="lh-lg text-black-50 top">
+                            Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod temporcd incididunt consectetur laboredolore dolor adipisicing. 
+                        </p>
+                        <div class="icons">
+                            <i class="fab fa-facebook-f fs-4 p-3 left"></i>
+                            <i class="fab fa-twitter fs-4 p-3 top"></i>
+                            <i class="fab fa-instagram fs-4 p-3 bottom"></i>
+                            <i class="fab fa-linkedin fs-4 p-3 right"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-md-6 col-sm-12 bottom">
+                    <div class="box mt-4">
+                        <img src="images/team/team4.jpg" alt="">
+                        <h4 class="mt-3 right">Jonh Doe</h4>
+                        <h5 class="left">Graphic Designer</h5>
+                        <p class="lh-lg text-black-50 top">
+                            Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod temporcd incididunt consectetur laboredolore dolor adipisicing. 
+                        </p>
+                        <div class="icons">
+                            <i class="fab fa-facebook-f fs-4 p-3 left"></i>
+                            <i class="fab fa-twitter fs-4 p-3 top"></i>
+                            <i class="fab fa-instagram fs-4 p-3 bottom"></i>
+                            <i class="fab fa-linkedin fs-4 p-3 right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Team  -->
+    <!-- Start Skills  -->
+    <div class="skills pt-5 pb-5">
+        <div class="container">
+            <div class="main-header right">
+                <h2 class="text-white">TECHNICAL SKILLS</h2>
+            </div>
+            <div class="prog-holder top">
+                <h3>
+                    <span class="num" data-nums="87">0</span>%
+                </h3>
+                <h2>PHOTOSHOP</h2>
+                <div class="prog">
+                    <span data-prog="87%"></span>
+                </div>
+            </div>
+            <div class="prog-holder left">
+                <h3>
+                    <span class="num" data-nums="75">0</span>%
+                </h3>
+                <h2>WORDPRESS</h2>
+                <div class="prog">
+                    <span data-prog="75%"></span>
+                </div>
+            </div>
+            <div class="prog-holder right">
+                <h3>
+                    <span class="num" data-nums="60">0</span>%
+                </h3>
+                <h2>GRAPHIC</h2>
+                <div class="prog">
+                    <span data-prog="60%"></span>
+                </div>
+            </div>
+            <div class="prog-holder bottom">
+                <h3>
+                    <span class="num" data-nums="90">0</span>%
+                </h3>
+                <h2>DEVELOPMENT</h2>
+                <div class="prog">
+                    <span data-prog="90%"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Skills  -->
+    <!-- Start Services  -->
+    <section class="services pt-5 pb-5">
+        <div class="container">
+            <div class="main-header left">
+                <h2>SERVICES</h2>
+            </div>
+            <div class="row mt-4">
+                <div class="col-xl-4 col-md-6 col-sm-12 left">
+                    <div class="box mt-4 text-center p-4">
+                        <i class="fas fa-shopping-bag fs-6 text-white p-3"></i>
+                        <h4 class="mt-4">DEVELOPMENT</h4>
+                        <p class="text-black-50 lh-lg">
+                            Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 right">
+                    <div class="box mt-4 text-center p-4">
+                        <i class="fas fa-shield fs-6 text-white p-3"></i>
+                        <h4 class="mt-4">WEB DESIGN</h4>
+                        <p class="text-black-50 lh-lg">
+                            Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 top">
+                    <div class="box mt-4 text-center p-4">
+                        <i class="fas fa-server fs-6 text-white p-3"></i>
+                        <h4 class="mt-4">SEO</h4>
+                        <p class="text-black-50 lh-lg">
+                            Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 bottom">
+                    <div class="box mt-4 text-center p-4">
+                        <i class="fas fa-globe fs-6 text-white p-3"></i>
+                        <h4 class="mt-4">GRAPHIC DESIGN</h4>
+                        <p class="text-black-50 lh-lg">
+                            Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 left">
+                    <div class="box mt-4 text-center p-4">
+                        <i class="fas fa-bullseye fs-6 text-white p-3"></i>
+                        <h4 class="mt-4">CONTENT WRITING</h4>
+                        <p class="text-black-50 lh-lg">
+                            Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 right">
+                    <div class="box mt-4 text-center p-4">
+                        <i class="fab fa-html5 fs-6 text-white p-3"></i>
+                        <h4 class="mt-4">HTML BASIC</h4>
+                        <p class="text-black-50 lh-lg">
+                            Lorem ipsum dolor consectetur dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore adipisicing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Services  -->
+    <!-- Start Choose -->
+    <section class="choose pt-5 pb-5 bg-light">
+        <div class="container">
+            <div class="main-header right">
+                <h2>WHY CHOOSE US</h2>
+            </div>
+            <div class="row mt-4">
+                <div class="col-xl-6 col-md-12">
+                    <div class="box mt-4 list">
+                        <ul class="p-0 m-0 d-flex">
+                            <li class="active text-capitalize fs-5 p-3 top" data-choose="design">design</li>
+                            <li class="text-capitalize fs-5 p-3 top" data-choose="Company">Company</li>
+                            <li class="text-capitalize fs-5 p-3 top" data-choose="Support">Support</li>
+                        </ul>
+                        <p class="p-2 text-black-50 lh-lg design right">
+                            Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                        </p>
+                        <p class="p-2 text-black-50 lh-lg Company">
+                            Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                        </p>
+                        <p class="p-2 text-black-50 lh-lg Support">
+                            Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua. Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-12">
+                    <div class="box mt-4">
+                        <div class="slide-1 slide">
+                            <h4 class="d-flex justify-content-between p-2 fs-5 align-items-center left">
+                                Photography
+                            <i class="fas fa-plus fs-5"></i>
+                            </h4>
+                            <p class="p-2 text-black-50 lh-lg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh. Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
+                            </p>
+                        </div>
+                        <div class="slide-2 slide">
+                            <h4 class="d-flex justify-content-between p-2 fs-5 align-items-center left">
+                                Web Designing
+                            <i class="fas fa-plus fs-5"></i>
+                            </h4>
+                            <p class="p-2 text-black-50 lh-lg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh. Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
+                            </p>
+                        </div>
+                        <div class="slide-3 slide">
+                            <h4 class="d-flex justify-content-between p-2 fs-5 align-items-center left">
+                                Web Development
+                            <i class="fas fa-plus fs-5"></i>
+                            </h4>
+                            <p class="p-2 text-black-50 lh-lg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh. Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
+                            </p>
+                        </div>
+                        <div class="slide-4 slide">
+                            <h4 class="d-flex justify-content-between p-2 fs-5 align-items-center left">
+                                Responsive Design
+                            <i class="fas fa-plus fs-5"></i>
+                            </h4>
+                            <p class="p-2 text-black-50 lh-lg">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin non blandit nibh. Sed eget tortor tincidunt, auctor sem eget, mollis nisi. Pellentesque ipsum erat, facilisis ut venenatis eu, sodales vel dolor fusce diam ornare.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Choose -->
+    <!-- Start Video -->
+    <section class="video pt-5 pb-5">
+        <div class="container">
+            <div class="main-header left">
+                <h2 class="text-white">video</h2>
+            </div>
+            <div class="row mt-4">
+                <div class="col-xl-6 col-md-12">
+                    <div class="box mt-4">
+                        <ul class="p-0 m-0">
+                            <li class="d-flex left">
+                                <i class="fas fa-briefcase fs-4 p-3"></i>
+                                <div class="info ms-4">
+                                    <h5>Take a look at this video to see how we work.</h5>
+                                    <p class="lh-lg">
+                                        Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="d-flex top">
+                                <i class="fas fa-trophy fs-4 p-3"></i>
+                                <div class="info ms-4">
+                                    <h5>The programming language of ios apps</h5>
+                                    <p class="lh-lg">
+                                        Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="d-flex right">
+                                <i class="fas fa-rocket fs-4 p-3"></i>
+                                <div class="info ms-4">
+                                    <h5>Take a look at this video to see how we work.</h5>
+                                    <p class="lh-lg">
+                                        Lorem ipsum dolor consectetur adipisicing incididunt eiusmod tempor incididunt laboredolore magna aliqua.
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-md-12">
+                    <div class="box mt-4 bottom">
+                        <img src="images/parallax/skills.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Video -->
+    <!-- Start Blog  -->
+    <section class="blog pt-5 pb-5">
+        <div class="container">
+            <div class="main-header left">
+                <h2>LATEST BLOG</h2>
+            </div>
+            <div class="row mt-4">
+                <div class="col-xl-4 col-md-6 col-sm-12 top">
+                    <div class="box mt-4 p-3">
+                        <img src="images/blog/avatar1.jpg" alt="">
+                        <h5 class="mt-3">CONSECTETUR ADIPISICING INVENTORE</h5>
+                        <h6 class="fw-bold">12 MAY, 2015 / 5 COMMENTS</h6>
+                        <p class="text-black-50 lh-lg">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, dolorum, fugiat, eligendi magni quibusdam iure cupiditate ex voluptas unde
+                        </p>
+                        <a href="#" class="text-decoration-none text-capitalize  p-2">read more</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 left">
+                    <div class="box mt-4 p-3">
+                        <img src="images/blog/avatar2.jpg" alt="">
+                        <h5 class="mt-3">CONSECTETUR ADIPISICING INVENTORE</h5>
+                        <h6 class="fw-bold">12 MAY, 2015 / 5 COMMENTS</h6>
+                        <p class="text-black-50 lh-lg">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, dolorum, fugiat, eligendi magni quibusdam iure cupiditate ex voluptas unde
+                        </p>
+                        <a href="#" class="text-decoration-none text-capitalize  p-2">read more</a>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 bottom">
+                    <div class="box mt-4 p-3">
+                        <img src="images/blog/avatar3.jpg" alt="">
+                        <h5 class="mt-3">CONSECTETUR ADIPISICING INVENTORE</h5>
+                        <h6 class="fw-bold">12 MAY, 2015 / 5 COMMENTS</h6>
+                        <p class="text-black-50 lh-lg">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, dolorum, fugiat, eligendi magni quibusdam iure cupiditate ex voluptas unde
+                        </p>
+                        <a href="#" class="text-decoration-none text-capitalize  p-2">read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Blog  -->
+    <!-- Start Testimonlis -->
+    <section class="testimonials pt-5 pb-5">
+        <div class="container">
+            <div class="main-header right">
+                <h2 class="text-white">WHAT CLIENTS SAY.</h2>
+            </div>
+            <div class="slider-wrap">
+                <div class="slider">
+                    <div class="slide text-center">
+                        <p class="lh-lg text-white fw-bold right">
+                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet habitant morbi tristique senectus et netus et malesuada fames ac quam egestas.
+                        </p>
+                        <img class="mt-4 left" src="images/testimonial/testimonial-img1.jpg" alt="">
+                        <h3 class="mt-4 text-white top">Andrew Doe</h3>
+                        <div class="btn">
+                            <button class="prev" onclick="testPrev()">
+                            <i class="fas fa-angle-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="next" onclick="testNext()">
+                            <i class="fas fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="slide text-center">
+                        <p class="lh-lg text-white fw-bold right">
+                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet habitant morbi tristique senectus et netus et malesuada fames ac quam egestas.
+                        </p>
+                        <img class="mt-4 left" src="images/testimonial/testimonial-img2.jpg" alt="">
+                        <h3 class="mt-4 text-white top">Andrew Doe</h3>
+                        <div class="btn">
+                            <button class="prev" onclick="testPrev()">
+                            <i class="fas fa-angle-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="next" onclick="testNext()">
+                            <i class="fas fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="slide text-center">
+                        <p class="lh-lg text-white fw-bold right">
+                            habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet habitant morbi tristique senectus et netus et malesuada fames ac quam egestas.
+                        </p>
+                        <img class="mt-4 left" src="images/team/team3.jpg" alt="">
+                        <h3 class="mt-4 text-white top">Andrew Doe</h3>
+                        <div class="btn">
+                            <button class="prev" onclick="testPrev()">
+                            <i class="fas fa-angle-left" aria-hidden="true"></i>
+                            </button>
+                            <button class="next" onclick="testNext()">
+                            <i class="fas fa-angle-right" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Testimonlis -->
+    <!-- Start Clients  -->
+    <section class="clients pt-5 pb-5">
+        <div class="main-header left">
+            <h2>OUR CLIENTS</h2>
+        </div>
+        <div class="slider-wrap mt-4">
+            <div class="slider">
+                <div class="slide top">
+                    <img src="images/clients-logo/client1.png" alt="">
+                </div>
+                <div class="slide bottom">
+                    <img src="images/clients-logo/client2.png" alt="">
+                </div>
+                <div class="slide left">
+                    <img src="images/clients-logo/client3.png" alt="">
+                </div>
+                <div class="slide right">
+                    <img src="images/clients-logo/client4.png" alt="">
+                </div>
+                <div class="slide top">
+                    <img src="images/clients-logo/client5.png" alt="">
+                </div>
+            </div>
+            <div class="btn text-center mt-3">
+                <button class="prev" onclick="clientPrev()">
+                <i class="fas fa-angle-left" aria-hidden="true"></i>
+                </button>
+                <button class="next" onclick="clientNext()">
+                <i class="fas fa-angle-right" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- End Clients  -->
+    <!-- Start Contact  -->
+    <section class="contact pt-5 pb-5">
+        <div class="container">
+            <div class="main-header text-white">
+                <h2>CONTACT</h2>
+            </div>
+            <div class="info text-center">
+                <h6 class="text-white fs-4">123 4567 890</h6>
+                <p class="text-white fs-4">123 lorem ipsum, 4th floor, lorem, ipsum</p>
+                <h6 class="text-white fs-4">mail@demo.com</h6>
+            </div>
+            <form action="">
+                <input type="text" name="name" id="" placeholder="Full Name">
+                <input type="email" name="mail" id="" placeholder="Your Email">
+                <input type="text" name="sub" id="" placeholder="Your Subject">
+                <br>
+                <textarea name="msg" id="" placeholder="Your Message"></textarea>
+                <br>
+                <input class="submit" type="submit" value="send message">
+            </form>
+        </div>
+    </section>
+    <!-- End Contact  -->
+    <!-- Start Footer  -->
+    <footer class="footer pt-4 pb-4">
+        <div class="container d-flex text-center justify-content-between flex-wrap align-items-center">
+            <div class="info text-capitalize">
+                Copyright © 2016 All Rights made by <span class="text-danger fs-5">♥</span> <span>ahmed walid</span>
+            </div>
+            <div class="icons">
+                <i class="fab fa-facebook-f fs-4 p-3"></i>
+                <i class="fab fa-twitter fs-4 p-3"></i>
+                <i class="fab fa-instagram fs-4 p-3"></i>
+                <i class="fab fa-linkedin fs-4 p-3"></i>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer  -->
+    <span class="up text-uppercase fw-bold">up</span>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+</body>
+</html>
