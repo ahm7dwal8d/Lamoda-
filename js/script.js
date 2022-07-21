@@ -1,937 +1,436 @@
 
-// Header Section 
+// Setting Box Section 
 
-$(".header .burger-icon").click(function () {
+let settingBox = document.querySelector(".setting-box")
+let settingBoxIcon = document.querySelector(".setting-box .icon")
 
-    $(".header ul").slideToggle()
-
+settingBoxIcon.addEventListener("click", function () {
+    settingBox.classList.toggle("active")
+    this.classList.add("active")
 })
 
-$(window).scroll(function () {
+let colorEl = document.querySelectorAll(".setting-box .color ul li")
 
-    if ($(window).scrollTop() >= 800) {
+let mainColor = localStorage.getItem("color-option")
 
-        $(".header").addClass("active")
+if (mainColor !== null) {
+    document.documentElement.style.setProperty("--main-Color", mainColor)
+    colorEl.forEach((el) => {
+        el.classList.remove("active")
+        if (el.dataset.color === mainColor) {
+            el.classList.add("active")
+        }
+    })
+}
 
+colorEl.forEach((el) => {
+    el.addEventListener("click", function (e) {
+        colorEl.forEach((el) => {
+            el.classList.remove("active")
+            this.classList.add("active")
+        })
+        document.documentElement.style.setProperty("--main-Color", e.target.dataset.color)
+        localStorage.setItem("color-option", e.target.dataset.color)
+    })
+})
+
+let themeEl = document.querySelectorAll(".setting-box .theme li")
+
+let mainBackground = localStorage.getItem("background-option")
+
+if (mainBackground !== null) {
+    themeEl.forEach((el) => {
+        el.classList.remove("active")
+        if (el.dataset.theme === mainBackground) {
+            el.classList.add("active")
+            document.body.style.background = el.dataset.theme;
+        }
+    })
+}
+
+
+themeEl.forEach((el) => {
+    el.addEventListener("click", function (e) {
+        themeEl.forEach((el) => {
+            el.classList.remove("active")
+            this.classList.add("active")
+        })
+        document.body.style.background = e.target.dataset.theme;
+        localStorage.setItem("background-option", e.target.dataset.theme)
+    })
+})
+
+let sliderEl = document.querySelectorAll(".setting-box .slider-option li") 
+
+sliderEl.forEach((el) => {
+    el.addEventListener("click", function (e) {
+        sliderEl.forEach((el) => {
+            el.classList.remove("active")
+            this.classList.add("active")
+        })
+        sliderStatus = e.target.dataset.slider
+        if (sliderStatus === "true") {
+            sliderStatus = true;
+            randomSlider()
+            console.log(sliderStatus)
+        } else {
+            sliderStatus = false;
+            console.log(sliderStatus)
+            clearInterval(sliderInterval)
+        }
+    })
+})
+
+let sliderStatus;
+let sliderInterval;
+
+function randomSlider() {
+    if (sliderStatus === true) {
+        sliderInterval = setInterval(() => {
+            lanSlider.append(lanSlide[0])
+            document.querySelector(".landing .container").classList.add("active")
+        }, 5000)
     } else {
-
-        $(".header").removeClass("active")
-
+        
     }
+}
 
+randomSlider()
+
+let fontEl = document.querySelectorAll(".setting-box .fonts li")
+
+let mainFont = localStorage.getItem("font-option")
+
+if (mainFont !== null) {
+    fontEl.forEach((el) => {
+            el.classList.remove("active")
+            if (el.dataset.font === mainFont) {
+                el.classList.add("active")
+                document.body.style.setProperty("font-family", mainFont)
+            }
+        })
+}
+
+fontEl.forEach((el) => {
+    el.addEventListener("click", function (e) {
+        fontEl.forEach((el) => {
+            el.classList.remove("active")
+            this.classList.add("active")
+        })
+        document.body.style.setProperty("font-family", e.target.dataset.font)
+        localStorage.setItem("font-option", e.target.dataset.font)
+    })
 })
 
-$(".header ul li a").click(function (Event) {
+let resetButton = document.querySelector(".setting-box button")
 
-    Event.preventDefault()
+resetButton.addEventListener("click", function () {
+    localStorage.removeItem("color-option")
+    localStorage.removeItem("background-option")
+    localStorage.removeItem("font-option")
+    window.location.reload()
+})
 
-    $(this).addClass("active").parent().siblings().find("a").removeClass("active")
+// Header Section 
+let header = document.querySelector(".header")
+let burgerIcon = document.querySelector(".header .burger-icon")
+let headerLinks = document.querySelector(".header ul")
 
-    $("html , body").animate({
 
+burgerIcon.addEventListener("click", function () {
+    let overly = document.createElement("div")
+    overly.className = "header-overly"
+    document.body.appendChild(overly)
+    overly.appendChild(headerLinks)
+    let closeButton = document.createElement("span")
+    closeButton.className = "close-button"
+    let buttonText = document.createTextNode("X")
+    closeButton.appendChild(buttonText)
+    headerLinks.appendChild(closeButton)
+    document.addEventListener("click", function (el) {
+        if (el.target.className === "close-button" || el.target.className === "header-overly") {
+            overly.remove()
+        }
+    })
+})
+
+// Make Scrolling Animation 
+
+$(".header ul a").on("click", function () {
+    $("html, body").animate({
         scrollTop: $("." + $(this).data("scroll")).offset().top - $(".header").innerHeight()
-
     })
-
-})
-
-$(window).ready(function () {
-
-    $(".header .left").animate({
-
-        left: 0,
-
-        opacity: 1
-
-    })
-
-    $(".header .top").animate({
-
-        top: 0,
-
-        opacity: 1
-
-    })
-
-    $(".header .bottom").animate({
-
-        bottom: 0,
-
-        opacity: 1
-
-    })
-
-    $(".header .right").animate({
-
-        right: 0,
-
-        opacity: 1
-
-    })
-
+    $(".header-overly").remove()
 })
 
 // Landing Section 
-
-let landingSlider = document.querySelector(".landing .slider")
-
-let landingSlide = landingSlider.getElementsByClassName("slide")
-
-function landingNext() {
-
-    landingSlider.append(landingSlide[0])
-
+// Make Landing Animation After Page Make Refress
+window.onload = function () {
+    document.querySelector(".landing .container").classList.add("active")
 }
 
-function landingPrev() {
 
-    landingSlider.prepend(landingSlide[landingSlide.length - 1])
+let lanSlider = document.querySelector(".landing .slider")
+let lanSlide = lanSlider.getElementsByClassName("slide")
 
+function lanPrev () {
+    lanSlider.prepend(lanSlide[lanSlide.length - 1])
+    document.querySelector(".landing .container").classList.add("active")
+}
+function lanNext () {
+    lanSlider.append(lanSlide[0])
+    document.querySelector(".landing .container").classList.add("active")
 }
 
-setInterval(function () {
-
-    landingSlider.append(landingSlide[0])
-
-} , 10000)
-
-$(window).ready(function () {
-
-    $(".landing .top").animate({
-
-        top: 0,
-
-        opacity: 1
-
+$(".landing .main").click(() => {
+    $("html, body").animate({
+        scrollTop: $("." + $(".landing .main").data("lan")).offset().top - $(".header").innerHeight()
     })
-
-    $(".landing .right").animate({
-
-        right: 0,
-
-        opacity: 1
-
-    })
-
-    $(".landing .bottom").animate({
-
-        bottom: 0,
-
-        opacity: 1
-
-    })
-
-    $(".landing .left").animate({
-
-        left: 0,
-
-        opacity: 1
-
-    })
-
-})
-
-// Setting Box 
-
-$(".setting-box .icon").click(function () {
-
-    $(".setting-box").toggleClass("active")
-
-})
-
-$(".setting-box .color .color").click(function () {
-
-    $(this).addClass("active").siblings().removeClass("active")
-
-})
-
-document.body.classList.add(localStorage.getItem("bodyColor"))
-
-let bodyColor = document.querySelectorAll(".setting-box .color .color")
-
-let colorArrey = []
-
-for (let i = 0; i < bodyColor.length; i++) {
-
-    colorArrey.push(bodyColor[i].getAttribute("data-color"))
-
-    bodyColor[i].addEventListener("click" , function () {
-
-        document.body.classList.remove(...colorArrey)
-
-        document.body.classList.add(bodyColor[i].getAttribute("data-color"))
-
-        localStorage.setItem("bodyColor" , bodyColor[i].getAttribute("data-color") )
-
-    })
-
-}
-
-// About Section 
-
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".about").offset().top - 400) {
-
-        $(".about .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-        $(".about .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
-        })
-
-        $(".about .bottom").animate({
-
-            bottom: 0,
-
-            opacity: 1
-
-        })
-
-        $(".about .top").animate({
-
-            top: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
 })
 
 // Facts Section 
 
 let factsSection = document.querySelector(".facts")
+let factsSpan = document.querySelectorAll(".facts span")
+let factsSectionOffSetTop = factsSection.offsetTop;
+let windowHeight = window.innerHeight;
+let started = false
 
-let factsOffsetTop = factsSection.offsetTop;
-
-let factsNum = document.querySelectorAll(".facts .num")
-
-let Started = false
-
-function StartCounter(el) {
-
-    let Goal = el.dataset.goal;
-
-    let Counte = setInterval(function () {
-
+function startCounter (el) {
+    let goal = el.dataset.goal;
+    let counte = setInterval(() => {
         el.textContent++;
-
-
-        if (el.textContent === Goal) {
-
-            clearInterval(Counte)
-
+        if (el.textContent === goal) {
+            clearInterval(counte)
         }
-
     })
-
 }
-
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".facts").offset().top - 400) {
-
-        $(".facts .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-        $(".facts .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
-        })
-
-        $(".facts .top").animate({
-
-            top: 0,
-
-            opacity: 1
-
-        })
-
-        $(".facts .bottom").animate({
-
-            bottom: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
-})
 
 // Section Section 
 
-$(".section ul li").click(function () {
+let sectionHead = document.querySelectorAll(".section .section-head span")
+let sectionBoxs = document.querySelectorAll(".section .section-content .all")
 
-    $(this).addClass("active").siblings().removeClass("active")
-
-    var section = $(this).data("section")
-
-    $(".section .section-content .all").fadeOut()
-
-    $(".section .section-content ." + section ).fadeIn()
-
+sectionHead.forEach((span) => {
+    span.addEventListener("click", function () {
+        sectionHead.forEach((span) => {
+            span.classList.remove("active")
+        })
+        this.classList.add("active")
+    })
+    span.addEventListener("click", function () {
+        sectionBoxs.forEach((box) => {
+            box.style.display = "none"
+        })
+        document.querySelectorAll(span.dataset.section).forEach((el) => el.style.display = "flex")
+    })
 })
 
-let sectionImg = document.querySelector(".section .img")
+let sectionResSlider = document.querySelector(".section .section-content .responsive .slider")
+let sectionResSlide = sectionResSlider.getElementsByClassName("slide")
 
-let sectionSlide = sectionImg.getElementsByClassName("slide")
+setInterval(() => {
+        sectionResSlider.append(sectionResSlide[0])
+}, 5000)
 
-function sectionNext() {
-
-    sectionImg.append(sectionSlide[0])
-
+function resPrev () {
+    sectionResSlider.prepend(sectionResSlide[sectionResSlide.length - 1])
 }
 
-function sectionPrev() {
-
-    sectionImg.prepend(sectionSlide[sectionSlide.length - 1])
-
+function resNext () {
+    sectionResSlider.append(sectionResSlide[0])
 }
 
-$(window).scroll(function () {
+// Our Work Section 
+let workSpans = document.querySelectorAll(".work .work-head span")
+let workBoxs = document.querySelectorAll(".work .row > div")
 
-    if ($(window).scrollTop() >= $(".section").offset().top - 400) {
-
-        $(".section .top").animate({
-
-            top: 0,
-
-            opacity: 1
-
+workSpans.forEach((span) => {
+    span.addEventListener("click", function () {
+        workSpans.forEach((span) => {
+            span.classList.remove("active")
+            this.classList.add("active")
         })
-
-        $(".section .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
+    })
+    span.addEventListener("click", function () {
+        workBoxs.forEach((box) => {
+            box.style.display = "none"
         })
-
-        $(".section .bottom").animate({
-
-            bottom: 0,
-
-            opacity: 1
-
-        })
-
-        $(".section .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
+        document.querySelectorAll(span.dataset.work).forEach((el) => el.style.display = "block")
+    })
 })
 
-// History Section 
+let workImg = document.querySelectorAll(".work img")
 
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".history").offset().top - 400) {
-
-        $(".history .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
+workImg.forEach((img) => {
+    img.addEventListener("click", function (e) {
+        let overly = document.createElement("div")
+        overly.className = "overly-box"
+        document.body.appendChild(overly)
+        let slider = document.createElement("div")
+        slider.className = "slider"
+        overly.appendChild(slider)
+        for (let i = 0; i < workImg.length; i++) {
+            let boxImg = document.createElement("div")
+            boxImg.className = `box-img`
+            slider.appendChild(boxImg)
+            if (img.alt !== "") {
+                let head = document.createElement("h3")
+                head.className = `box-head`
+                let headText = document.createTextNode(`${img.alt}-${i + 1}`)
+                head.appendChild(headText)
+                boxImg.appendChild(head)
+            }
+            let imgBox = document.createElement("img")
+            imgBox.src = workImg[i].src
+            boxImg.appendChild(imgBox)
+        }
+        let workSlider = document.querySelector(".overly-box .slider")
+        let workBox = workSlider.getElementsByClassName("box-img")
+        let btn = document.createElement("div")
+        btn.className = "btn"
+        overly.appendChild(btn)
+        let prevButton = document.createElement("button")
+        prevButton.className = "prev"
+        let prevSpan = document.createElement("span")
+        prevSpan.className = "fas fa-angle-left"
+        prevButton.appendChild(prevSpan)
+        btn.appendChild(prevButton)
+        let nextButton = document.createElement("button")
+        nextButton.className = "next"
+        let nextSpan = document.createElement("span")
+        nextSpan.className = "fas fa-angle-right"
+        nextButton.appendChild(nextSpan)
+        btn.appendChild(nextButton)
+        prevButton.addEventListener("click", function () {
+            workSlider.prepend(workBox[workBox.length - 1])
         })
-
-        $(".history .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
+        nextButton.addEventListener("click", function () {
+            workSlider.append(workBox[0])
         })
-
-    }
-
-})
-
-// Work Section 
-
-$(".work ul li").click(function () {
-
-    $(this).addClass("active").siblings().removeClass("active")
-
-    var work = $(this).data("work")
-
-    $(".work .row .all").fadeOut()
-
-    $(".work .row ." + work).fadeIn()
-
-})
-
-$(".choose ul li").click(function () {
-
-    $(this).addClass("active").siblings().removeClass("active")
-
-    var choose = $(this).data("choose")
-
-    $(".choose .list p").fadeOut()
-
-    $(".choose .list ." + choose).fadeIn()
-
-})
-
-$(".choose .slide-1 h4").click(function () {
-
-    $(".choose .slide-1  p").slideToggle()
-
-})
-
-$(".choose .slide-2 h4").click(function () {
-
-    $(".choose .slide-2  p").slideToggle()
-
-})
-
-$(".choose .slide-4 h4").click(function () {
-
-    $(".choose .slide-4 p").slideToggle()
-
-})
-$(".choose .slide-3 h4").click(function () {
-
-    $(".choose .slide-3  p").slideToggle()
-
-})
-
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".work").offset().top - 400) {
-
-        $(".work .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
+        let closeButton = document.createElement("span")
+        closeButton.className ="close-button"
+        let closeButtonText = document.createTextNode("X")
+        closeButton.appendChild(closeButtonText)
+        overly.appendChild(closeButton)
+        document.addEventListener("click", function (e) {
+            if (e.target.className === "close-button" || e.target.className === "overly-box") {
+                overly.remove()
+            }
         })
-
-        $(".work .top").animate({
-
-            top: 0,
-
-            opacity: 1
-
-        })
-
-        $(".work .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-        $(".work .bottom").animate({
-
-            bottom: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
-})
-
-// Team Section 
-
-
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".team").offset().top - 400) {
-
-        $(".team .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
-        })
-
-        $(".team .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-        $(".team .top").animate({
-
-            top: 0,
-
-            opacity: 1
-
-        })
-
-        $(".team .bottom").animate({
-
-            bottom: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
+    })
 })
 
 // Skills Section 
 
-let skillsSection = document.querySelector(".skills")
+let skillsSection =  document.querySelector(".skills")
+let skillsOffsetTop = skillsSection.offsetTop
+let skillsSpan = document.querySelectorAll(".skills .prog span")
+let counteSpan = document.querySelectorAll(".skills .prog-head span")
 
-let skillsOffsetTop = skillsSection.offsetTop;
-
-let skillsNums = document.querySelectorAll(".skills .prog-holder .num")
-
-let started = false
-
-function SkillsCounter(e) {
-
-    let Nums = e.dataset.nums;
-
-    let Counte = setInterval(function () {
-
-        e.textContent++;
-
-        if (e.textContent === Nums) {
-
-            clearInterval(Counte)
-
+function counteDown(e) {
+    let goal = e.dataset.num;
+    let counte = setInterval(() => {
+        e.textContent++
+        if (e.textContent === goal) {
+            clearInterval(counte)
         }
-
     })
-
 }
 
-let progressSpan = document.querySelectorAll(".skills .prog span")
-
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".skills").offset().top - 600) {
-
-        $(".skills .top").animate({
-
-            top: 0,
-
-            opacity: 1
-
-        })
-
-        $(".skills .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
-        })
-
-        $(".skills .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-        $(".skills .bottom").animate({
-
-            bottom: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
-})
-
-// Services Section 
-
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".services").offset().top - 400) {
-
-        $(".services .top").animate({
-
-            top: 0,
-
-            opacity: 1
-
-        })
-
-        $(".services .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
-        })
-
-        $(".services .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-        $(".services .bottom").animate({
-
-            bottom: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
-})
-
 // Choose Section 
+let tapHead = document.querySelectorAll(".choose .tap-head span")
+let tapContent = document.querySelectorAll(".choose .tap-content p")
 
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".choose").offset().top - 400) {
-
-        $(".choose .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
+tapHead.forEach((span) => {
+    span.addEventListener("click", function () {
+        tapHead.forEach((span) => {
+            span.classList.remove("active")
+            this.classList.add("active")
         })
-
-        $(".choose .left").delay(600).animate({
-
-            left: 0,
-
-            opacity: 1
-
+    })
+    span.addEventListener("click", function () {
+        tapContent.forEach((box) => {
+            box.style.display = "none"
         })
-
-        $(".choose .top").delay(500).animate({
-
-            top: 0,
-
-            opacity: 1
-
-        })
-
-        $(".choose .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
+        document.querySelectorAll(span.dataset.tap).forEach((el) => el.style.display = "block")
+    })
 })
 
-// Video Section 
+let panel = document.querySelectorAll(".choose .panel")
 
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".video").offset().top - 400) {
-
-        $(".video .top").animate({
-
-            top: 0,
-
-            opacity: 1
-
+panel.forEach((box) => {
+    box.addEventListener("click", function () {
+        panel.forEach((box) => {
+            box.classList.remove("active")
+            this.classList.add("active")
         })
-
-        $(".video .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
-        })
-
-        $(".video .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-        $(".video .bottom").animate({
-
-            bottom: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
-})
-
-// Blog Section 
-
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".blog").offset().top - 400) {
-
-        $(".blog .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
-        })
-
-        $(".blog .top").animate({
-
-            top: 0,
-
-            opacity: 1
-
-        })
-
-        $(".blog .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-        $(".blog .bottom").animate({
-
-            bottom: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
+    })
 })
 
 // Testimonlis Section 
 
-let testimonlisSlider = document.querySelector(".testimonials .slider")
+let testimonlisSlider = document.querySelector(".testimonlis .slider")
+let testimonlisSlide = testimonlisSlider.getElementsByClassName("slide")
 
-let testimonialsSlide = testimonlisSlider.getElementsByClassName("slide")
+setInterval(() => {
+    testimonlisSlider.append(testimonlisSlide[0])
+}, 5000)
 
-setInterval(function () {
-
-    testimonlisSlider.append(testimonialsSlide[0])
-
-} , 10000)
+function testPrev() {
+    testimonlisSlider.prepend(testimonlisSlide[testimonlisSlide.length - 1])
+}
 
 function testNext() {
-
-    testimonlisSlider.append(testimonialsSlide[0])
-
-}
-function testPrev() {
-
-    testimonlisSlider.prepend(testimonialsSlide[testimonialsSlide.length - 1])
-
+    testimonlisSlider.append(testimonlisSlide[0])
 }
 
-let clientSlider = document.querySelector(".clients .slider")
-
+// Client Section 
+let clientSlider = document.querySelector(".client .slider")
 let clientSlide = clientSlider.getElementsByClassName("slide")
 
-function clientNext() {
-
+setInterval(() => {
     clientSlider.append(clientSlide[0])
-
-}
-
-function clientPrev() {
-
-    clientSlider.prepend(clientSlide[clientSlide.length - 1])
-
-}
-
-setInterval(function () {
-
-    clientSlider.append(clientSlide[0])
-
-} , 10000)
-
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".testimonials").offset().top - 400) {
-
-        $(".testimonials .top").animate({
-
-            top: 0,
-
-            opacity: 1
-
-        })
-
-        $(".testimonials .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
-        })
-
-        $(".testimonials .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
-})
-
-// Clients Section 
-
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= $(".clients").offset().top - 400) {
-
-        $(".clients .top").animate({
-
-            top: 0,
-
-            opacity: 1
-
-        })
-
-        $(".clients .left").animate({
-
-            left: 0,
-
-            opacity: 1
-
-        })
-
-        $(".clients .right").animate({
-
-            right: 0,
-
-            opacity: 1
-
-        })
-
-        $(".clients .bottom").animate({
-
-            bottom: 0,
-
-            opacity: 1
-
-        })
-
-    }
-
-})
+}, 5000)
 
 // Button To Top 
+let buttonToTop = document.querySelector("span.up")
 
-$("span.up").click(function () {
-
-    $("html , body").animate({
-
-        scrollTop: 0
-
+buttonToTop.addEventListener("click", () => {
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth"
     })
-
 })
 
-$(window).scroll(function () {
-
-    if ($(window).scrollTop() >= 800) {
-
-        $("span.up").addClass("active")
-
-    } else {
-
-        $("span.up").removeClass("active")
-
-    }
-
-})
-
+// Scrolling 
 
 window.onscroll = function () {
-
+    // Header Section 
+        window.scrollY >= 800 ? header.classList.add("active") : header.classList.remove("active")
     // Facts Section 
-
-    if (window.scrollY >= factsOffsetTop - 400) {
-
-        if (!Started) {
-
-            factsNum.forEach((num)=> {
-
-                StartCounter(num)
-
-            })
-
-        }
-
-        Started = true  
-
-    }
-
-    // Skills Section 
-
-    if (window.scrollY >= skillsOffsetTop - 400) {
-
+    if (window.scrollY >= factsSectionOffSetTop - 400) {
         if (!started) {
-
-            skillsNums.forEach((span)=> {
-
-                SkillsCounter(span)
-
+            factsSpan.forEach((span) => {
+                startCounter(span)
             })
-
         }
-
-        started = true
-
-        progressSpan.forEach((prog)=> {
-
-            prog.style.width = prog.dataset.prog
-
-        })
-
+        started = true;
     }
-
+    // Skills Section 
+    if (window.scrollY >= skillsOffsetTop) {
+        skillsSpan.forEach((span) => {
+            span.style.width = span.dataset.prog
+        })
+        if (!started) {
+            counteSpan.forEach((span) => {
+                counteDown(span)
+            })
+        }
+        started = true
+    }
+    // Button To Top 
+    window.scrollY >= 800 ? buttonToTop.classList.add("active") : buttonToTop.classList.remove("active")
 }
+
