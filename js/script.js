@@ -62,6 +62,26 @@ themeEl.forEach((el) => {
 
 let sliderEl = document.querySelectorAll(".setting-box .slider-option li") 
 
+let sliderStatus;
+let sliderInterval;
+
+let random = localStorage.getItem("random-option")
+
+if (random !== null) {
+    sliderEl.forEach((el) => {
+        el.classList.remove("active")
+        if (el.dataset.slider === random) {
+        el.classList.add("active")
+        }
+        if (random === "true") {
+            sliderStatus = true
+        } else {
+            sliderStatus = false;
+            clearInterval(sliderInterval)
+        }
+    })
+}
+
 sliderEl.forEach((el) => {
     el.addEventListener("click", function (e) {
         sliderEl.forEach((el) => {
@@ -72,24 +92,21 @@ sliderEl.forEach((el) => {
         if (sliderStatus === "true") {
             sliderStatus = true;
             randomSlider()
-            console.log(sliderStatus)
+            localStorage.setItem("random-option", true)
         } else {
             sliderStatus = false;
-            console.log(sliderStatus)
             clearInterval(sliderInterval)
+            localStorage.setItem("random-option", false)
         }
     })
 })
-
-let sliderStatus;
-let sliderInterval;
 
 function randomSlider() {
     if (sliderStatus === true) {
         sliderInterval = setInterval(() => {
             lanSlider.append(lanSlide[0])
             document.querySelector(".landing .container").classList.add("active")
-        }, 5000)
+        }, 1000)
     } else {
         
     }
